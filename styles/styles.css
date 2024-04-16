@@ -1,8 +1,7 @@
         img		{ 
 			max-width: 100%;
 		}
-		
-		
+
 		header {
             grid-area: header;
             background-color: yellow;
@@ -11,6 +10,20 @@
         nav {
             grid-area: nav;
             background-color: gray;
+            list-style-type: none;
+            background-color: #202938;
+        }
+
+        li a {
+            display: block;
+        }
+
+        li a:hover {
+            background-color: white;
+        }
+
+        .icon {
+            margin-right: 10px;
         }
 
         main {
@@ -46,6 +59,10 @@
 
         ul li {
             list-style-type: none;
+        }
+
+        body {
+            background-color: #131d26;
         }
 
 
