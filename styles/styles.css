@@ -1,69 +1,87 @@
-        img		{ 
-			max-width: 100%;
-		}
+.grid-container {
+    display: grid;
+    grid-template-areas:
+        'header header header header header header'
+        'nav nav nav nav nav nav'
+        'main main main main main main'
+        'main main main main main main'
+        'footer footer footer footer footer footer';
+    grid-gap: .5em;
+    padding: .5em;
+    
+    max-width: 62em;
+    margin: auto;
+}
 
-		header {
-            grid-area: header;
-            background-color: yellow;
-        }
+body {
+    background-color: #131d26;
+}
 
-        nav {
-            grid-area: nav;
-            background-color: gray;
-            list-style-type: none;
-            background-color: #202938;
-        }
+header {
+    grid-area: header;
+    background-color: #5865f2;
+    color: white;
+    text-align: center;
+}
 
-        li a {
-            display: block;
-        }
+nav {
+    grid-area: nav;
+    background-color: #5865f2;
+}
 
-        li a:hover {
-            background-color: white;
-        }
+ul {
+    list-style-type: none;
+    margin: 0;
+}
 
-        .icon {
-            margin-right: 10px;
-        }
+li {
+    float: left;
+}
 
-        main {
-            grid-area: main;
-            background-color: orange;
-        }
+li a {
+    display: block;
+    color: white;
+    padding: 10px 16px;
+    margin: 10px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+}
 
-        aside {
-            grid-area: aside;
-            background-color: bisque;
-        }
+li a:hover {
+    background-color: #ff6b00;
+}
 
-        footer {
-            grid-area: footer;
-            background-color: green;
-        }
+.active {
+    background-color: #ff6b00;
+    padding: 10px 15px;
+}
 
-        .grid-container {
-            display: grid;
-            grid-template-areas:
-                'header header header header header aside'
-                'nav nav main main main aside'
-                'nav nav main main main aside'
-                'nav nav main main main aside'
-				'footer footer footer footer footer footer';
-            grid-gap: .5em;
-            padding: .5em;
-			
-			max-width: 62em;
-			margin: auto;
-        }
+/* .icon {
+    margin-right: 10px;
+} */
 
+main {
+    grid-area: main;
+    background-color: #5865f2;
+    color: white;
+    text-align: center;
+}
 
-        ul li {
-            list-style-type: none;
-        }
+/* aside {
+    grid-area: aside;
+    background-color: bisque;
+} */
 
-        body {
-            background-color: #131d26;
-        }
+footer {
+    grid-area: footer;
+    background-color: #5865f2;
+    color: white;
+    text-align: center;
+}
+
+img		{ 
+    max-width: 100%;
+}
 
 
 
