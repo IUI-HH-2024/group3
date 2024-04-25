@@ -79,8 +79,9 @@ footer {
     text-align: center;
 }
 
-img		{ 
-    max-width: 100%;
+img { 
+    width: 250px;
+    height: 250px;
 }
 
 
