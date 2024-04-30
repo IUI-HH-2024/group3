@@ -76,6 +76,12 @@ main {
     box-sizing: border-box;
 }
 
+/* Center align headers */
+header h2,
+main h2 {
+    text-align: center;
+}
+
 /* Responsive Breakpoints */
 @media only screen and (max-width: 900px) {
 	main {
