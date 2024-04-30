@@ -64,7 +64,21 @@ main {
     grid-area: main;
     background-color: #5865f2;
     color: white;
-    text-align: center;
+    text-align: left;
+    padding: 20px;
+}
+
+/* Responsive Breakpoints */
+@media only screen and (max-width: 900px) {
+	main {
+		text-align: left; /* Adjust text alignment for tablet screen size */
+	}
+}
+
+@media only screen and (max-width: 600px) {
+	main {
+		text-align: left; /* Adjust text alignment for mobile screen size */
+	}
 }
 
 /* aside {
