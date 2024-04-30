@@ -85,6 +85,72 @@ img {
 }
 
 
+/* Drop down menu for Technological Developments. */
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #5865f2;
+    min-width: 160px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    z-index: 1;
+    color: white; /* Text color */
+}
+
+.dropdown-content a {
+    color: white; /* Text color */
+    padding: 10px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #ff6b00; /* Hover background color */
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content a,
+.dropbtn {
+    border: none; /* Remove border */
+    padding: 0;
+    border-radius: 0;
+}
+
+.dropbtn {
+    color: white;
+}
+
+/* Style the navigation list */
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    background-color: #5865f2; /* Background color */
+}
+
+li {
+    display: inline;
+}
+
+li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 16px;
+    margin: 10px 15px;
+}
+
+li a:hover {
+    background-color: #ff6b00;
+}
 
 /* Below are two arbitrary break points. Please adjust to fit your content's needs. You can have more than two breakpoints. You want your site to be usable at ALL viewport widths. */
 
