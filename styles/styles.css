@@ -8,13 +8,17 @@
         'footer footer footer footer footer footer';
     grid-gap: .5em;
     padding: .5em;
-    
+    max-width: 100%;
+    marigin: 0;
+    /*
     max-width: 62em;
-    margin: auto;
+    margin: auto; */
+	
 }
 
 body {
     background-color: #131d26;
+    margin: 0;
 }
 
 header {
@@ -32,14 +36,16 @@ nav {
 ul {
     list-style-type: none;
     margin: 0;
+    padding: 0;
 }
 
 li {
-    float: left;
+    display: inline-block;
+    /*float: left;*/
 }
 
 li a {
-    display: block;
+    /*display: block;*/
     color: white;
     padding: 10px 16px;
     margin: 10px 15px;
@@ -66,6 +72,8 @@ main {
     color: white;
     text-align: left;
     padding: 20px;
+    max-width: 100%;
+    box-sizing: border-box;
 }
 
 /* Responsive Breakpoints */
@@ -94,8 +102,8 @@ footer {
 }
 
 img { 
-    width: 250px;
-    height: 250px;
+    max-width: 100%;
+    height: auto;
 }
 
 /* Below are two arbitrary break points. Please adjust to fit your content's needs. You can have more than two breakpoints. You want your site to be usable at ALL viewport widths. */
