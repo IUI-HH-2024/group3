@@ -36,8 +36,7 @@ ul {
 }
 
 li {
-    display: inline-block;
-    /*float: left;*/
+    float: left;
 }
 
 li a {
