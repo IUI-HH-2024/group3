@@ -82,6 +82,11 @@ main h2 {
     text-align: center;
 }
 
+header h3,
+main h3 {
+    text-align: center;
+}
+
 /* Center alignment of images */
 img.center {
     display: block;
