@@ -9,33 +9,20 @@
 }
 
 .card:hover {
-    transform: translateY(-5px); /* Move the card slightly up on hover */
+    transform: translateY(-5px); 
 }
 
-.card:active {
-    transform: translateY(0); /* Reset transform on click */
+.card .additional-content {
+    display: none;
 }
 
-.hover-card {
-    position: relative;
-    background-color: #fff;
-    border: 1px solid #ccc;
-    padding: 10px;
-    color: #5865f2;
-}
-
-.hover-card h3 {
-    text-align: center;
-    font-size: 16px;
-    margin-bottom: 10px; 
-}
-
-.additional-content {
-    display: none; /* Initially hide the additional content */
-}
-
-.card:hover .hover-card .additional-content {
+.card:hover .additional-content {
     display: block;
+}
+
+.card h3 {
+    text-align: center; /* Center the title */
+    margin-bottom: 10px; /* Add space below the title */
 }
 
 .grid-container {
