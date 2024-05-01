@@ -16,6 +16,13 @@
     transform: translateY(0); /* Reset transform on click */
 }
 
+.hover-card {
+    display: none; /* Initially hide the hover card */
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+
 .grid-container {
     display: grid;
     grid-template-areas:
