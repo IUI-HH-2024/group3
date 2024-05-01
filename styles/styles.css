@@ -1,57 +1,15 @@
-.card {
-    background-color: #ff6b00; 
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    margin-bottom: 20px;
-    cursor: pointer;
-    transition: transform 0.3s;
-    display: inline-block;
-    width: 100%;
-    box-sizing: border-box;
-    word-wrap: break-word;
-}
-
-.card:hover {
-    transform: translateY(-5px); 
-}
-
-.card .additional-content {
-    display: none;
-    margin-top: 10px;
-    padding: 10px;
-    background-color: #fff;
-    border: 1px solid #ccc;
-    color: #333;
-}
-
-.card:hover .additional-content {
-    display: block;
-}
-
-.card h3 {
-    text-align: center; /* Center the title */
-    margin-bottom: 10px; /* Add space below the title */
-}
-
+/* Base styles for layout components */
 .grid-container {
     display: grid;
     grid-template-areas:
         'header header header header header header'
         'nav nav nav nav nav nav'
         'main main main main main main'
-        'main main main main main main'
         'footer footer footer footer footer footer';
     grid-gap: .5em;
     padding: .5em;
     max-width: 62em;
-    margin: auto; 
-	
-}
-
-body {
-    background-color: #131d26;
-    margin: 0;
+    margin: auto;
 }
 
 header {
@@ -66,6 +24,30 @@ nav {
     background-color: #5865f2;
 }
 
+body {
+    background-color: #131d26;
+    margin: 0;
+}
+
+.card {
+    background-color: #ff6b00;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card:active {
+    transform: translateY(0);
+}
+
+/* Styles for list and links */
 ul {
     list-style-type: none;
     margin: 0;
@@ -93,55 +75,13 @@ li a:hover {
     padding: 10px 15px;
 }
 
-/* .icon {
-    margin-right: 10px;
-} */
-
 main {
     grid-area: main;
     background-color: #5865f2;
     color: white;
-    text-align: left;
     padding: 20px;
-    max-width: 100%;
     box-sizing: border-box;
 }
-
-/* Center align headers */
-header h2,
-main h2 {
-    text-align: center;
-}
-
-header h3,
-main h3 {
-    text-align: center;
-}
-
-/* Center alignment of images */
-img.center {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-/* Responsive Breakpoints */
-@media only screen and (max-width: 900px) {
-	main {
-		text-align: left; /* Adjust text alignment for tablet screen size */
-	}
-}
-
-@media only screen and (max-width: 600px) {
-	main {
-		text-align: left; /* Adjust text alignment for mobile screen size */
-	}
-}
-
-/* aside {
-    grid-area: aside;
-    background-color: bisque;
-} */
 
 footer {
     grid-area: footer;
@@ -150,60 +90,125 @@ footer {
     text-align: center;
 }
 
-img { 
-    width: 250px;
-    height: 250px;
+/* Hamburger icon and mobile menu styles */
+#hamburger-icon {
+  margin: auto 0;
+  display: none; /* Initially hidden */
+  cursor: pointer;
+  z-index: 1010;
+  position: fixed;
+  top: 5px;
+  padding:10px;
+  background-color: rgba(0, 0, 0, 0.9);
+  border-radius: 5px;
+  
 }
 
-/* Below are two arbitrary break points. Please adjust to fit your content's needs. You can have more than two breakpoints. You want your site to be usable at ALL viewport widths. */
+#hamburger-icon div {
+  width: 35px;
+  height: 3px;
+  background-color: white;
+  margin: 6px 0;
+  transition: 0.4s;
+}
 
+.open .bar1 {
+  transform: rotate(-45deg) translate(-6px, 6px);
+}
 
+.open .bar2 {
+  opacity: 0;
+}
 
-        /*FIRST BREAK POINT === tablet  Note: This is an arbitrary break point! Change it to fit your needs. */
-        @media only screen and (max-width : 900px) {
-            body {
-                background: blue;
-            }
+.open .bar3 {
+  transform: rotate(45deg) translate(-6px, -8px);
+}
 
-            .grid-container {
-                display: grid;
-                grid-template-areas:
-                    'header header header header header header'
-					'nav nav nav nav nav nav'
-                    'main main main main aside aside'
-                    'footer footer footer footer footer footer';
-                grid-gap: .5em;
-                padding: .5em;
-            }
+/* Style for regular navigation */
+.regular-nav {
+    display: flex;  /* Default display for regular nav */
+}
 
-            ul li {
-                display: inline-block;
-            }
+/* Style for mobile menu */
+.mobile-menu.is-visible {
+    display: flex; /* Show the menu when this class is added */
+}
 
-        }
+.mobile-menu {
+    display: none;  /* Initially hidden */
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.9);  /* Semi-transparent background */
+    z-index: 1000;  /* Ensure it is below the hamburger icon but above other content */
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
 
-        /*SECOND BREAK POINT === mobile  Note: This is an arbitrary break point! Change it to fit your needs. */
-        @media only screen and (max-width : 600px) {
+.mobile-menu ul {
+    width: 100%;  /* Full width to use the entire space of the menu */
+    list-style-type: none;  /* No bullet points */
+    padding: 0;
+    margin: 0;
+    display: flex;  /* Using flex to align children */
+    flex-direction: column;  /* Stack children vertically */
+    align-items: center;  /* Center items horizontally */
+    justify-content: center;  /* Center items vertically */
+}
 
-            body {
-                background: fuchsia;
-            }
+.mobile-menu li {
+    /*width: 100%;  /* Full width to match the container width */
+    /*background-color: #5865f2;  /* Consistent with your design theme */
+    margin-left:10px;  /* Space between menu items */
+    padding: 5px;  /* Padding for touch targets */
+}
 
-            .grid-container {
-                display: grid;
-                grid-template-areas:
-                    'nav nav nav nav nav nav'
-                    'header header header header header header'
-                    'main main main main main main'
-                    'aside aside aside aside aside aside'
-                    'footer footer footer footer footer footer';
-                grid-gap: .5em;
-                padding: .5em;
-            }
+.mobile-menu a {
+    color: white;
+    text-decoration: none;
+    display: block;  /* Ensure the link uses the full list item area */
+    text-align: center;  /* Center the text within the link */
+    width: 100%;  /* Full width to ensure easy touch */
+}
 
-            ul li {
-                display: inline-block;
-            }
-			
+/* Media queries to control visibility */
+@media only screen and (max-width: 900px) {
+    .regular-nav {
+        display: none;  /* Hide the regular navigation in mobile view */
+    }
 
-        }
+    #hamburger-icon {
+        display: block;  /* Show hamburger icon in mobile view */
+    }
+
+    .mobile-menu {
+        display: none;  /* Keep mobile menu hidden until toggled */
+    }
+}
+
+@media only screen and (min-width: 901px) {
+    .mobile-menu {
+        display: none;  /* Ensure mobile menu is hidden in desktop view */
+    }
+    #hamburger-icon {
+        display: none;  /* Hide hamburger icon in desktop view */
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .grid-container {
+        grid-template-areas:
+            'nav nav nav nav nav nav'
+            'header header header header header header'
+            'main main main main main main'
+            'footer footer footer footer footer footer';
+    }
+
+    body {
+        background-color: fuchsia;  /* Optional: Changes background color for demonstration */
+    }
+}
+
