@@ -90,6 +90,11 @@ footer {
     text-align: center;
 }
 
+img {
+    width: 250px;
+    height: 250px;
+}
+
 /* Hamburger icon and mobile menu styles */
 #hamburger-icon {
   margin: auto 0;
