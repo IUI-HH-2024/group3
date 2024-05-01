@@ -17,12 +17,25 @@
 }
 
 .hover-card {
-    display: none; /* Initially hide the hover card */
+    position: relative;
     background-color: #fff;
     border: 1px solid #ccc;
     padding: 10px;
     color: #5865f2;
 }
+
+.hover-card h3 {
+	text-align: center;
+	font-size: 16px;
+	margin-bottom: 10px; 
+}
+
+.additional-content {
+    display: none; /* Initially hide the additional content */
+}
+
+.card:hover .additional-content {
+    display: block;
 
 .grid-container {
     display: grid;
