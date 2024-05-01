@@ -6,6 +6,8 @@
     margin-bottom: 20px;
     cursor: pointer;
     transition: transform 0.3s;
+    height: auto;
+    overflow: hidden;
 }
 
 .card:hover {
