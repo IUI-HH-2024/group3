@@ -15,48 +15,50 @@
     <div class="grid-container">
         <header>
             <h2>Online Gaming Impact: Exploring Online Games and Social Connections</h2>
+          
+           <div id="hamburger-icon">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+            </div>
         </header>
 
         <nav>
-            <ul>
-                <li>
-                    <a href="index.html" class="active">Home
-                        <!-- <img src="images/icons8-home-64.png" alt="home logo">  -->
-                    </a>
-                </li>
-                <li>
-                    <a href="global.html">Global Gaming</a>
-                </li>
-                <li>
-                    <a href="impact.html">Impact</a>
-                </li>
-                <li>
-                    <a href="techdevelopments.html">Technological Developments</a>
-                </li>
-                <li>
-                    <a href="thoughts.html">Gamer Thoughts</a>
-                </li>
-                <li>
-                    <a href="aboutus.html">About Us</a>
-                </li>
+            <ul class="regular-nav">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="global.html">Global Gaming</a></li>
+                <li><a href="impact.html">Impact</a></li>
+                <li><a href="techdevelopments.html">Technological Developments</a></li>
+                <li><a href="thoughts.html">Gamer Thoughts</a></li>
+                <li><a href="aboutus.html">About Us</a></li>
             </ul>
+            <!-- Mobile Menu (initially hidden) -->
+            <div class="mobile-menu">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="global.html">Global Gaming</a></li>
+                    <li><a href="impact.html">Impact</a></li>
+                    <li><a href="techdevelopments.html">Technological Developments</a></li>
+                    <li><a href="thoughts.html">Gamer Thoughts</a></li>
+                    <li><a href="aboutus.html">About Us</a></li>
+                </ul>
+            </div>
         </nav>
 
         <main>
 		<h2>Introduction to Online Gaming</h2>
-		
-			<div class="card" id="myCard">
-    				<div class="card-content">
-       					<h3>What is Online Gaming?</h3>
-        				<div class="additional-content">
-            					<ul>
-							<li>Online gaming is playing video games over the internet with others worldwide. Players connect to platforms to interact in real-time, forming virtual communities. Games involve teamwork, strategy, and competition, providing an immersive experience.</li>
-							<li>Online gaming has become a popular form of entertainment for millions of people around the world. Massively Multiplayer Online Role-Playing Games (MMORPG) allow players to interact with each other in real-time, creating a social experience unlike any other. Guilds within these games encourage communication and cooperation, leading to the formation of meaningful relationships between players. Despite misconceptions about gamers being anti-social or lazy, many people play online games to socialize and build connections with others. Understanding the reasons behind why people enjoy playing online games can help dispel negative stereotypes and appreciate the value of these virtual communities.</li>
-						</ul>
-        				</div>
-    				</div>
-			</div>
+		<section>
+			<div class="card" id="myCard" style="display:none;">
+				<p>What is online gaming?</p>
+				<ul>
+					<li>Online gaming is playing video games over the internet with others worldwide. Players connect to platforms to interact in real-time, forming virtual communities. Games involve teamwork, strategy, and competition, providing an immersive experience.</li>
+					<li>Online gaming has become a popular form of entertainment for millions of people around the world. Massively Multiplayer Online Role-Playing Games (MMORPG) allow players to interact with each other in real-time, creating a social experience unlike any other. Guilds within these games encourage communication and cooperation, leading to the formation of meaningful relationships between players. Despite misconceptions about gamers being anti-social or lazy, many people play online games to socialize and build connections with others. Understanding the reasons behind why people enjoy playing online games can help dispel negative stereotypes and appreciate the value of these virtual communities.</li>
+				</ul>
+				<a href="#" id="showCardLink">Show Card</a>	
+			</div>		
+		</section>
             
+
             <h2>Evolution of Gaming as a Social Platform</h2>
             <p>Online gaming has evolved into a significant social platform in the digital era. Technology advancements allow players to connect and form communities through online multiplayer games. Despite stereotypes, online gaming offers benefits in interaction, self-esteem, and offline relationships. These games provide a virtual space for global communication, with MMORPGs fostering collaborative play and anonymous interaction. Players can freely express themselves and develop social skills, forming strong relationships and even romantic connections. While there are risks, online gaming communities offer a supportive environment for individuals to connect and engage with others, transcending physical boundaries and shaping social interactions in the digital age.</p>
         </main>
@@ -71,17 +73,28 @@
     </div>
 
 <script>
-    const myCard = document.querySelector('.card');
-    const hoverCard = myCard.querySelector('.hover-card');
-
-    myCard.addEventListener('mouseenter', function() {
-        hoverCard.style.display = 'block';
+  
+    const showCardLink = document.querySelector('#showCardLink');
+    const myCard = document.querySelector('#myCard');
+    
+    showCardLink.addEventListener('click', function(event) {
+        event.preventDefault();
+        if (myCard.style.display === 'none') {
+            myCard.style.display = 'block'; // Show the card
+        } else {
+            myCard.style.display = 'none'; // Hide the card
+        }
+    });
+    showCardLink.addEventListener('mouseenter', function() {
+        this.style.color = "blue"; // Change link color on hover
     });
 
-    myCard.addEventListener('mouseleave', function() {
-        hoverCard.style.display = 'none';
-    });
+    showCardLink.addEventListener('mouseleave', function() {
+        this.style.color = "black"; // Revert link color on hover out
+    });	
 </script>
+
+<script src="/scripts/script.js"></script>
 
 </body>
 
