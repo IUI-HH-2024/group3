@@ -25,17 +25,18 @@
 }
 
 .hover-card h3 {
-	text-align: center;
-	font-size: 16px;
-	margin-bottom: 10px; 
+    text-align: center;
+    font-size: 16px;
+    margin-bottom: 10px; 
 }
 
 .additional-content {
     display: none; /* Initially hide the additional content */
 }
 
-.card:hover .additional-content {
+.card:hover .hover-card .additional-content {
     display: block;
+}
 
 .grid-container {
     display: grid;
