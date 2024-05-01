@@ -73,15 +73,15 @@
     </div>
 
 <script>
-    const myCard = document.querySelector('#myCard');
-    const hoverCard = document.querySelector('.hover-card');
-    
-    hoverCard.addEventListener('mouseenter', function() {
-        this.style.display = 'block';
+    const myCard = document.querySelector('.card');
+    const hoverCard = myCard.querySelector('.hover-card');
+
+    myCard.addEventListener('mouseenter', function() {
+        hoverCard.style.display = 'block';
     });
 
-    hoverCard.addEventListener('mouseleave', function() {
-        this.style.display = 'none';    
+    myCard.addEventListener('mouseleave', function() {
+        hoverCard.style.display = 'none';
     });
 </script>
 
