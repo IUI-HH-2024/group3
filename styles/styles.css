@@ -13,9 +13,19 @@
 }
 
 header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     grid-area: header;
     background-color: #5865f2;
     color: white;
+    padding: 30px;
+    position: relative;
+}
+
+header h2 {
+    width: 80%;
+    margin: 0 auto;
     text-align: center;
 }
 
@@ -95,18 +105,17 @@ img {
     height: 250px;
 }
 
-/* Hamburger icon and mobile menu styles */
+
 #hamburger-icon {
-  margin: auto 0;
-  display: none; /* Initially hidden */
+  display: none;
   cursor: pointer;
   z-index: 1010;
-  position: fixed;
-  top: 5px;
+  position: absolute;
+  top: 20px;
+  left: 20px;
   padding:10px;
   background-color: rgba(0, 0, 0, 0.9);
   border-radius: 5px;
-  
 }
 
 #hamburger-icon div {
@@ -129,54 +138,52 @@ img {
   transform: rotate(45deg) translate(-6px, -8px);
 }
 
-/* Style for regular navigation */
 .regular-nav {
-    display: flex;  /* Default display for regular nav */
+    display: flex;
 }
 
-/* Style for mobile menu */
 .mobile-menu.is-visible {
-    display: flex; /* Show the menu when this class is added */
+    display: flex;
 }
 
 .mobile-menu {
-    display: none;  /* Initially hidden */
+    display: none;
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(0, 0, 0, 0.9);  /* Semi-transparent background */
-    z-index: 1000;  /* Ensure it is below the hamburger icon but above other content */
+    background-color: rgba(0, 0, 0, 0.9);
+    z-index: 1000;
     justify-content: center;
     align-items: center;
     flex-direction: column;
 }
 
 .mobile-menu ul {
-    width: 100%;  /* Full width to use the entire space of the menu */
-    list-style-type: none;  /* No bullet points */
+    width: 100%;
+    list-style-type: none;
     padding: 0;
     margin: 0;
-    display: flex;  /* Using flex to align children */
-    flex-direction: column;  /* Stack children vertically */
-    align-items: center;  /* Center items horizontally */
-    justify-content: center;  /* Center items vertically */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .mobile-menu li {
-    /*width: 100%;  /* Full width to match the container width */
-    /*background-color: #5865f2;  /* Consistent with your design theme */
+    /* width: 100%;
+    background-color: #5865f2;
     margin-left:10px;  /* Space between menu items */
-    padding: 5px;  /* Padding for touch targets */
+    padding: 5px;
 }
 
 .mobile-menu a {
     color: white;
     text-decoration: none;
-    display: block;  /* Ensure the link uses the full list item area */
-    text-align: center;  /* Center the text within the link */
-    width: 100%;  /* Full width to ensure easy touch */
+    display: block;
+    text-align: center;
+    width: 100%;
 }
 
 /* Media queries to control visibility */
