@@ -14,30 +14,35 @@
 <body>
     <div class="grid-container">
         <header>
-            <h2>Online Gaming Impact: Exploring Online Games and Social Connections</h2>
+            <h2>The Social Impact of Online Gaming</h2>
+          
+           <div id="hamburger-icon">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+            </div>
         </header>
 
         <nav>
-            <ul>
-                <li>
-                    <a href="index.html">Home</a>
-                </li>
-                <li>
-                    <a href="global.html">Global Gaming</a>
-                </li>
-                <li>
-                    <a href="impact.html">Impact</a>
-                </li>
-                <li>
-                    <a href="techdevelopments.html">Technological Developments</a>
-                </li>
-                <li>
-                    <a href="thoughts.html">Gamer Thoughts</a>
-                </li>
-                <li>
-                    <a href="aboutus.html">About Us</a>
-                </li>
+            <ul class="regular-nav">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="global.html">Global Gaming</a></li>
+                <li><a href="impact.html">Impact</a></li>
+                <li><a href="techdevelopments.html" class="active">Technological Developments</a></li>
+                <li><a href="thoughts.html">Gamer Thoughts</a></li>
+                <li><a href="aboutus.html">About Us</a></li>
             </ul>
+
+            <div class="mobile-menu">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="global.html">Global Gaming</a></li>
+                    <li><a href="impact.html">Impact</a></li>
+                    <li><a href="techdevelopments.html">Technological Developments</a></li>
+                    <li><a href="thoughts.html">Gamer Thoughts</a></li>
+                    <li><a href="aboutus.html">About Us</a></li>
+                </ul>
+            </div>
         </nav>
 
         <main>
@@ -80,6 +85,22 @@
             <!-- <a target="_blank" href="https://icons8.com/icon/BE56i0LQZMIW/home">Home</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a> -->
         </footer>
     </div>
+
+    <script>
+    
+        document.addEventListener('DOMContentLoaded', function() {
+            const hamburgericon = document.getElementById('hamburger-icon');
+            const mobilemenu = document.querySelector('.mobile-menu');
+    
+            hamburgericon.addEventListener('click', function() {
+                this.classList.toggle('open');
+                mobilemenu.classList.toggle('is-visible');
+            });
+        });
+    
+    </script>
+    
+    <script src="/scripts/script.js"></script>
 
 </body>
 
