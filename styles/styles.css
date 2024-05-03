@@ -93,6 +93,12 @@ main {
     box-sizing: border-box;
 }
 
+.index-main {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
 footer {
     grid-area: footer;
     background-color: #5865f2;
@@ -103,6 +109,17 @@ footer {
 img {
     width: 250px;
     height: 250px;
+}
+
+.content {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.hpimg {
+    width: 300px;
+    height: auto;
+    align-self: center;
 }
 
 
@@ -221,6 +238,16 @@ img {
 
     body {
         background-color: fuchsia;  /* Optional: Changes background color for demonstration */
+    }
+
+    main {
+        flex-direction: column;
+    }
+
+    .hpimg {
+        width: 100%;
+        height: auto;
+        margin-top: 20px;
     }
 }
 
